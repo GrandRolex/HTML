@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<title>Работа с радио кнопками</title>
+	</head>
+	<body>
+		<input type="radio" name="rButton" value="Диана"> Диана
+		<input type="radio" name="rButton" value="Светлана"> Светлана
+		<input type="radio" name="rButton" value="Людмила"> Людмила
+		<button onclick="fun1()">Выполнить</button>
+	<script>
+		function fun1(){
+			var falseCheck = true;
+			var rBut = document.getElementsByName("rButton");
+			for(var i=0; i< rBut.length; i++){
+				if(rBut[i].checked){
+				alert("Выбран элемент: " + rBut[i].value);
+				falseCheck = false;
+				}
+			}
+			if (falseCheck == true) {alert("Ничего не выбрано");}
+		}
+	</script>
+	</body>
+</html>
